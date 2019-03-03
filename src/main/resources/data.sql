@@ -1,0 +1,1 @@
+insert into users ( username, email, last_name, name, password, user_type ) values ('lukereno', 'lukus2@live.com', 'rennison', 'luke', 'lukepw', 1)

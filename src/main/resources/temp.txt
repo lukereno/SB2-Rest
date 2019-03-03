@@ -1,0 +1,5 @@
+http://localhost:8443/h2-console/login.do
+
+mvn spring-boot:run
+
+jdbc:h2:mem:testdb
