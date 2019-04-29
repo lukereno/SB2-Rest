@@ -1,13 +1,14 @@
 package com.luke.restdemo.controllers;
 
+import com.luke.foundation.web.InternalServerError;
+import com.luke.foundation.web.WrongParameters;
 import com.luke.restdemo.dto.UserDTO;
-import com.luke.restdemo.exceptions.InternalServerError;
-import com.luke.restdemo.exceptions.WrongParameters;
 import com.luke.restdemo.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.HttpServerErrorException;
 
 import java.util.List;
 
@@ -50,7 +51,7 @@ public class UserController {
             return new ResponseEntity<>(HttpStatus.OK);
         } catch (WrongParameters p) {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-        } catch (InternalServerError u) {
+        } catch (HttpServerErrorException.InternalServerError u) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }

@@ -46,18 +46,18 @@ public class User {
         super();
     }
 
-    public User(String username, String password, int userType, String email, String name, String lastName, String tel,
-                Date bornDate) {
-        super();
-        this.username = username;
-        this.password = password;
-        this.userType = userType;
-        this.email = email;
-        this.name = name;
-        this.lastName = lastName;
-        this.tel = tel;
-        this.bornDate = bornDate;
-    }
+//    public User(String username, String password, int userType, String email, String name, String lastName, String tel,
+//                Date bornDate) {
+//        super();
+//        this.username = username;
+//        this.password = password;
+//        this.userType = userType;
+//        this.email = email;
+//        this.name = name;
+//        this.lastName = lastName;
+//        this.tel = tel;
+//        this.bornDate = bornDate;
+//    }
 
     public String getUsername() {
         return username;
